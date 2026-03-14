@@ -19,4 +19,6 @@ md: `time`sym_market xasc md;
 aj_result: aj[`sym_market`time; pr;md];
 delta_result: update delta: price - price_market from aj_result;
 
-select time, sym, price, mtime,price_market, delta from delta_result
+aj_result2: aj[`sym_market`time; md; pr];
+delta_result2: update delta: price - price_market from aj_result2; 
+select time, sym, price, mtime,price_market, delta from delta_result2
